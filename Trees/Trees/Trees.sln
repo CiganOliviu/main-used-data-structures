@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees", "Trees\Trees.csproj", "{C4314FAB-F81B-4F89-ABC8-331EF7678E78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTrees", "TestTrees\TestTrees.csproj", "{E47FBD71-E88B-491E-8F7B-325256ABBDFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4314FAB-F81B-4F89-ABC8-331EF7678E78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4314FAB-F81B-4F89-ABC8-331EF7678E78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4314FAB-F81B-4F89-ABC8-331EF7678E78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4314FAB-F81B-4F89-ABC8-331EF7678E78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E47FBD71-E88B-491E-8F7B-325256ABBDFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E47FBD71-E88B-491E-8F7B-325256ABBDFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E47FBD71-E88B-491E-8F7B-325256ABBDFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E47FBD71-E88B-491E-8F7B-325256ABBDFB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
