@@ -13,7 +13,7 @@ namespace Stack
             _data = new int[StackDefaultSize];
             _index = 0;
         }
-
+        
         public Stack(int stackSize)
         {
             if (stackSize <= 0)
@@ -22,27 +22,39 @@ namespace Stack
             _data = new int[stackSize];
             _index = 0;
         }
-        /*
-        public int Pop()
-        {
-            return 0;
-        }
         
+        public void Pop()
+        {
+            _data[_index] = 0;
+            _index -= 1;
+        }
+
         public int Peek()
         {
-            return 0;
+            var index = _index - 1;
+            return _data[index];
         }
-        */
+        
         
         public void Push(int key)
         {
-            if (_index != _data.Length) return;
+            if (_index == _data.Length) return;
             
-            var newArray = new int[2 * _data.Length];
-            Array.Copy(_data, 0, newArray, 0, _index);
-
             _data[_index] = key;
             _index++;
+        }
+        
+        public int[] GetStack()
+        {
+            return _data;
+        }
+        
+        public void Output()
+        {
+            for (var it = 0; it < _index; it++)
+                Console.Write(_data[it] + " ");
+
+            Console.WriteLine();
         }
     }
     
@@ -50,7 +62,19 @@ namespace Stack
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var stack = new Stack(9);
+            
+            stack.Push(2);
+            stack.Push(3);
+            stack.Push(4);
+            stack.Push(5);
+                
+            stack.Output();
+            Console.WriteLine(stack.Peek());
+            stack.Pop();
+            stack.Output();
+            Console.WriteLine(stack.Peek());
+            stack.Output();
         }
     }
 }
