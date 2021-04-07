@@ -40,5 +40,17 @@ namespace TestStack
             for (var it = 0; it < expected.Length; it++)
                 Assert.True(_stack.GetStack()[it] == expected[it]);
         }
+
+        [Test]
+        public void Test_Peek_()
+        {
+            _stack.Push(1);
+            _stack.Push(2);
+            _stack.Push(3);
+            _stack.Push(4);
+            _stack.Push(5);
+            
+            Assert.True(_stack.Peek() == 5);
+        }
     }
 }

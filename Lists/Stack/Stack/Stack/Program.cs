@@ -34,8 +34,7 @@ namespace Stack
             var index = _index - 1;
             return _data[index];
         }
-        
-        
+
         public void Push(int key)
         {
             if (_index == _data.Length) return;
