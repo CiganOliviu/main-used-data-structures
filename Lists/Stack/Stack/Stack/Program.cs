@@ -48,7 +48,7 @@ namespace Stack
         {
             return _data;
         }
-        
+
         public void Output()
         {
             for (var it = 0; it < _index; it++)
