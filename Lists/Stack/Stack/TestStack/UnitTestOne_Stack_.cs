@@ -1,18 +1,29 @@
 using NUnit.Framework;
+using Stack;
 
 namespace TestStack
 {
     public class Tests
     {
+        private StackDataStructure _stack;
         [SetUp]
         public void Setup()
         {
+            _stack = new StackDataStructure(5);
         }
 
         [Test]
-        public void Test__()
+        public void Test_Push_()
         {
-            Assert.Pass();
+            _stack.Push(1);
+            _stack.Push(2);
+            _stack.Push(3);
+            _stack.Push(4);
+            _stack.Push(5);
+
+            var expected = new int[] {1, 2, 3, 4, 5};
+            
+            Assert.AreEqual(_stack.GetStack(), expected);
         }
     }
 }
