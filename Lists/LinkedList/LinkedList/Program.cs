@@ -15,7 +15,7 @@ namespace LinkedList
             public Node(int data) { key = data; next = null; }
         }
 
-        public void insertFirst(int key)
+        public void InsertFirst(int key)
         {
             var newNode = new Node(key);
 
@@ -27,7 +27,7 @@ namespace LinkedList
             first = newNode;
         }
 
-        public void insertlast(int key)
+        public void Insertlast(int key)
         {
             var newNode = new Node(key);
 
@@ -39,7 +39,7 @@ namespace LinkedList
             last = newNode;
         }
 
-        public Node searchNode(int givenKey)
+        public Node SearchNode(int givenKey)
         {
             var currentNode = first;
 
@@ -54,9 +54,9 @@ namespace LinkedList
             return currentNode;
         }
 
-        public void insertAfterKey(int afterKey, int givenKey)
+        public void InsertAfterKey(int afterKey, int givenKey)
         {
-            var currentNode = searchNode(afterKey);
+            var currentNode = SearchNode(afterKey);
             
             if (currentNode == null)
                 return;
@@ -70,7 +70,7 @@ namespace LinkedList
                 last = newNode;
         }
 
-        public void deleteFirst()
+        public void DeleteFirst()
         {
             if (first == null)
                 return;
@@ -78,7 +78,7 @@ namespace LinkedList
             first = first.next;
         }
 
-        public void deleteLast()
+        public void DeleteLast()
         {
             var toDelete = first;
             Node previousNode = null;
@@ -96,13 +96,14 @@ namespace LinkedList
             last = previousNode;
         }
         
-        public void deleteGivenKey(int givenKey)
+        public void DeleteGivenKey(int givenKey)
         {
             var toDelete = first;
-            Node previousNode = null;
-            
+
             if (toDelete == null)
                 return;
+            
+            Node previousNode = null;
 
             while (toDelete != null)
             {
@@ -129,7 +130,7 @@ namespace LinkedList
             }
         }
 
-        public void printList()
+        public void PrintList()
         {
             Console.WriteLine("My list is :");
 
@@ -149,24 +150,24 @@ namespace LinkedList
         {
             var myList = new LinkedListDataStructure();
             
-            myList.insertFirst(6);
-            myList.insertFirst(7);
+            myList.InsertFirst(6);
+            myList.InsertFirst(7);
+
+            myList.Insertlast(3);
+            myList.Insertlast(5);
             
-            myList.insertlast(3);
-            myList.insertlast(5);
+            myList.InsertAfterKey(6, 8);
+            myList.InsertAfterKey(3, 9);
             
-            myList.insertAfterKey(6, 8);
-            myList.insertAfterKey(3, 9);
-            
-            myList.printList();
+            myList.PrintList();
             
             Console.WriteLine();
             
-            myList.deleteFirst();
-            myList.deleteLast();
-            myList.deleteGivenKey(8);
+            myList.DeleteFirst();
+            myList.DeleteLast();
+            myList.DeleteGivenKey(8);
             
-            myList.printList();
+            myList.PrintList();
         }
     }
 }
