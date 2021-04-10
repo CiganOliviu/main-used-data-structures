@@ -57,6 +57,10 @@ namespace LinkedList
         public void insertAfterKey(int afterKey, int givenKey)
         {
             var currentNode = searchNode(afterKey);
+            
+            if (currentNode == null)
+                return;
+            
             var newNode = new Node(givenKey);
 
             newNode.next = currentNode.next;
