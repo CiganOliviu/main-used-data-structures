@@ -2,19 +2,19 @@
 
 namespace Stack
 {
-    internal class Stack
+    public class StackDataStructure
     {
         private readonly int[] _data;
         private const int StackDefaultSize = 25;
         private int _index;
     
-        public Stack()
+        public StackDataStructure()
         {
             _data = new int[StackDefaultSize];
             _index = 0;
         }
         
-        public Stack(int stackSize)
+        public StackDataStructure(int stackSize)
         {
             if (stackSize <= 0)
                 throw new ArgumentOutOfRangeException(nameof(stackSize), "Unable to have negative stack size");
@@ -34,8 +34,7 @@ namespace Stack
             var index = _index - 1;
             return _data[index];
         }
-        
-        
+
         public void Push(int key)
         {
             if (_index == _data.Length) return;
@@ -48,7 +47,7 @@ namespace Stack
         {
             return _data;
         }
-        
+
         public void Output()
         {
             for (var it = 0; it < _index; it++)
@@ -62,7 +61,7 @@ namespace Stack
     {
         private static void Main(string[] args)
         {
-            var stack = new Stack(9);
+            var stack = new StackDataStructure(9);
             
             stack.Push(2);
             stack.Push(3);
