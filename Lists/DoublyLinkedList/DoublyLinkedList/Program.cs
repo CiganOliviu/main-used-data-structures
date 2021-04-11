@@ -67,12 +67,12 @@ namespace DoublyLinkedList
 
         public void InsertAfterKey(int afterKey, int givenKey)
         {
-            Node currentNode = SearchNode(afterKey);
+            var currentNode = SearchNode(afterKey);
 
             if (currentNode == null)
                 return;
 
-            Node newNode = new Node(givenKey);
+            var newNode = new Node(givenKey);
 
             newNode.prev = currentNode;
             newNode.next = currentNode.next;
